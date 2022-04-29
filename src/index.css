@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333;
+  color: #fff;
+  margin: 0;
+}
+
+header {
+  background-color: #333;
+  padding: 1rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  border: 5px solid transparent;
+  border-image: linear-gradient(
+    to bottom right,
+    #b827fc 0%,
+    #2c90fc 25%,
+    #b8fd33 50%,
+    #fec837 75%,
+    #fd1892 100%
+  );
+  border-image-slice: 1;
+  height: 60px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7em;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.search {
+  border: 2px solid #fff;
+  border-radius: 50px;
+  background-color: transparent;
+  font-size: 1.2rem;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+}
+
+.search:focus {
+  outline: 0;
+}
+
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie {
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.1);
+  width: 300px;
+  overflow: hidden;
+  margin: 1rem;
+  position: relative;
+}
+
+.movie img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+.movie-info {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #22254b;
+}
+
+.movie-info h3 {
+  margin: 0;
+}
+
+.movie-overview {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  box-shadow: 0px -3px 5px rgba(255, 255, 255, 0.1);
+  background-color: #fff;
+  color: #22254b;
+  padding: 1rem;
+  overflow: auto;
+  max-height: 100%;
+  transform: translateY(102%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.movie:hover .movie-overview {
+  transform: translateY(0%);
+}
+
+.tag {
+  background-color: #22254b;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+
+.tag.green {
+  color: rgb(18, 165, 18);
+}
+
+.tag.orange {
+  color: orange;
+}
+
+.tag.red {
+  color: red;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.menu a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #22254b;
+}
